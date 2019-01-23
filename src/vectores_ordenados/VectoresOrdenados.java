@@ -16,6 +16,21 @@ public class VectoresOrdenados {
 		}
 	}
 	
+
+	
+	public void reset() {
+		
+		for(int i=0;i<datos.length;i++) {
+			
+			datos[i] = 0;
+		}
+		
+	}
+	
+	
+	
+	
+	
 	
 	public VectoresOrdenados merge(VectoresOrdenados otro) {
 
@@ -25,6 +40,7 @@ public class VectoresOrdenados {
 
 		this.ordenar();
 		otro.ordenar();
+		mezcla.reset();
 		
 
 		// se mueve por this
@@ -37,17 +53,29 @@ public class VectoresOrdenados {
 
 		for(x=0;x<mezcla.datos.length;x++) {
 			
-			if(datos[i]<otro.datos[j]) {
+			if((i<datos.length)&&(j<otro.datos.length)) {
 				
-				mezcla.datos[x] = datos[i];
-				i++;
+				if(datos[i]<otro.datos[j]) {
+				
+					mezcla.datos[x] = datos[i];
+					i++;
+				}
+				else if(j<otro.datos.length) {
+					
+					mezcla.datos[x] = otro.datos[j];
+					j++;
+				}	
 			}
-			else {
+			else if(i==datos.length){
 				
 				mezcla.datos[x] = otro.datos[j];
 				j++;
 			}
-			
+			else if(j==otro.datos.length){
+				
+				mezcla.datos[x] = datos[i];
+				i++;
+			}
 		}
 		
 		

@@ -5,8 +5,8 @@ public class Start {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		VectoresOrdenados v1 = new VectoresOrdenados(5);
-		VectoresOrdenados v2 = new VectoresOrdenados(5);
+		VectoresOrdenados v1 = new VectoresOrdenados(20);
+		VectoresOrdenados v2 = new VectoresOrdenados(20);
 		v1.ordenar();
 		v2.ordenar();
 		v1.print();
