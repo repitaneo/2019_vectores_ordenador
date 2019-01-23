@@ -16,4 +16,4 @@ Permite
 * Un proyecto de Eclipse que podrás importar a tu workspacer desde File > Import > General > Import Files intro workspace
 
 ## Fecha
-Noviembre-Diciembre 2018
+Enero 2019
