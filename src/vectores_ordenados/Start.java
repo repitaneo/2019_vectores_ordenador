@@ -12,7 +12,8 @@ public class Start {
 		
 		VectoresOrdenados vectorReducido = v1.reducir();
 		vectorReducido.print();
-		
+		VectoresOrdenados repetidos = v1.getRepetidos();
+		repetidos.print();
 		
 		
 		
